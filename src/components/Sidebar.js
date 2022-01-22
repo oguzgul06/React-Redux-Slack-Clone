@@ -58,7 +58,7 @@ function Sidebar() {
       {/* Connect to db and list all the channels */}
 
       {channels.map((channel) => (
-        <SidebarOption title={channel.name} id={channel.id} />
+        <SidebarOption key={channel.id} title={channel.name} id={channel.id} />
       ))}
     </div>
   );

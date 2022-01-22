@@ -13,7 +13,7 @@ function App() {
         <div className="app__body">
           <Sidebar />
           <Routes>
-            <Route path="/room/:roomId" element={<Chat/>} />
+            <Route path="/room/:roomId" element={<Chat />} />
             <Route path="/" element={<h1>Welcome</h1>} />
           </Routes>
         </div>
