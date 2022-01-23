@@ -14,9 +14,11 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import AddIcon from "@mui/icons-material/Add";
 import db from "../firebase";
+import { useStateValue } from "../redux/StateProvider";
 
 function Sidebar() {
   const [channels, setChannels] = useState([]);
+  const [{ user }] = useStateValue();
 
   useEffect(() => {
     // Run this code ONCE when the sidebar component load
@@ -37,7 +39,7 @@ function Sidebar() {
           <h2>Brothers Programmer</h2>
           <h3>
             <FiberManualRecordIcon />
-            Oğuz Gül
+            {user?.displayName}
           </h3>
         </div>
         <CreateIcon />
